@@ -36,9 +36,7 @@ for (let i = 0; i < 3; i++) {
 
             age=prompt("yasinizi duzgun daxil edin")
 
-        }
-       
-       
+        } 
         if(i==0){
             user1 = [name, surname, age];
             if(user1[2]<18){
