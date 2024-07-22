@@ -21,21 +21,24 @@ let age = 0;
 for (let i = 0; i < 3; i++) {
 
     for (let j = 0; j < 1; j++) {
+
         let name = prompt(" Adinizi daxil edin");
-        while(name==""){
+        while(name=="" ||  !isNaN(name.slice(0,1))){
             name=prompt("adinizi duzgun daxil edin")
         }
         let surname = prompt(" soyadinizi daxil edin");
-        while(surname==""){
-            surname=prompt("adinizi duzgun daxil edin")
+        while(surname=="" ||  !isNaN(surname.slice(0,1))){
+            surname=prompt("soyadinizi duzgun daxil edin")
         }
         age = prompt(" yasinizi daxil edin");
-
-        while(isNaN(age) || age==""){
-            age=prompt("yasinizi duzgun daxil edin")
-        }
         age = parseInt(age);
+        while(isNaN(age) || age=="" || age<0 ){
 
+            age=prompt("yasinizi duzgun daxil edin")
+
+        }
+       
+       
         if(i==0){
             user1 = [name, surname, age];
             if(user1[2]<18){
